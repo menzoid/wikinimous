@@ -1,0 +1,11 @@
+
+<ul class="list-index">
+  <% @articles.each do |article| %>
+    <div class="article-block">
+      <li class="article-title"><%= link_to article.title, article_path(article) %>
+      - by:  <%= article.author %>
+      </li>
+      <li class="article-content"><%= article.content %></li>
+    </div>
+  <% end %>
+</ul>
